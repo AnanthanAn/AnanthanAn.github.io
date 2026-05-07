@@ -1,9 +1,328 @@
+<!-- Save as index.html -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Apps</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ananthakrishnan A | Flutter Developer</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      font-family: 'Inter', sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #020617;
+      color: white;
+    }
+
+    .glass {
+      background: rgba(15, 23, 42, 0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .gradient-text {
+      background: linear-gradient(to right, #60a5fa, #22d3ee);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+
+    .card-hover:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(59,130,246,0.2);
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Welcome</h1>
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 w-full z-50 glass">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+
+      <h1 class="text-xl font-bold gradient-text">
+        Ananthakrishnan
+      </h1>
+
+      <div class="hidden md:flex gap-8 text-sm text-slate-300">
+        <a href="#about" class="hover:text-white">About</a>
+        <a href="#projects" class="hover:text-white">Projects</a>
+        <a href="#skills" class="hover:text-white">Skills</a>
+        <a href="#contact" class="hover:text-white">Contact</a>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="min-h-screen flex items-center justify-center px-6">
+
+    <div class="max-w-4xl text-center">
+
+      <p class="text-cyan-400 mb-4 text-sm tracking-widest uppercase">
+        Flutter Mobile Developer
+      </p>
+
+      <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-6">
+        Building <span class="gradient-text">Modern Mobile Apps</span>
+      </h1>
+
+      <p class="text-slate-400 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
+        Published multiple Flutter applications on Google Play with experience in
+        scalable architecture, monetization, localization, and performance optimization.
+      </p>
+
+      <div class="flex flex-wrap justify-center gap-4 mt-10">
+
+        <a href="https://github.com/ananthanan"
+          target="_blank"
+          class="px-6 py-3 rounded-2xl bg-blue-600 hover:bg-blue-500 transition">
+          GitHub
+        </a>
+
+        <a href="https://play.google.com/store/apps/developer?id=Ananthakrishnan"
+          target="_blank"
+          class="px-6 py-3 rounded-2xl border border-slate-700 hover:border-blue-400 transition">
+          Play Store
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-24 px-6">
+
+    <div class="max-w-5xl mx-auto">
+
+      <h2 class="text-4xl font-bold mb-12">
+        About Me
+      </h2>
+
+      <div class="glass rounded-3xl p-8 md:p-12">
+
+        <p class="text-slate-300 text-lg leading-relaxed">
+          I’m a Flutter developer passionate about creating polished mobile experiences,
+          scalable application architecture, and monetized indie apps.
+          I’ve published multiple applications on Google Play ranging from
+          productivity tools to multiplayer social games.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-24 px-6">
+
+    <div class="max-w-6xl mx-auto">
+
+      <div class="flex items-center justify-between mb-14">
+        <h2 class="text-4xl font-bold">
+          Featured Projects
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+
+        <!-- Project 1 -->
+        <div class="glass rounded-3xl p-8 card-hover">
+
+          <div class="flex items-center justify-between mb-6">
+            <h3 class="text-2xl font-semibold">
+              Imposter
+            </h3>
+
+            <span class="text-xs px-3 py-1 rounded-full bg-blue-500/20 text-blue-300">
+              Game
+            </span>
+          </div>
+
+          <p class="text-slate-400 leading-relaxed mb-8">
+            A social deduction multiplayer party game built with Flutter featuring
+            offline gameplay, engaging UI, and AdMob monetization.
+          </p>
+
+          <a
+            href="https://play.google.com/store/apps/details?id=com.ananthan.imposter.imposter"
+            target="_blank"
+            class="text-cyan-400 hover:text-cyan-300">
+            View on Play Store →
+          </a>
+
+        </div>
+
+        <!-- Project 2 -->
+        <div class="glass rounded-3xl p-8 card-hover">
+
+          <div class="flex items-center justify-between mb-6">
+            <h3 class="text-2xl font-semibold">
+              Spender
+            </h3>
+
+            <span class="text-xs px-3 py-1 rounded-full bg-green-500/20 text-green-300">
+              Finance
+            </span>
+          </div>
+
+          <p class="text-slate-400 leading-relaxed mb-8">
+            Expense tracker application with budgeting, multi-currency support,
+            localization, and Riverpod architecture.
+          </p>
+
+          <a
+            href="https://play.google.com/store/apps/details?id=com.ananthan.spender"
+            target="_blank"
+            class="text-cyan-400 hover:text-cyan-300">
+            View on Play Store →
+          </a>
+
+        </div>
+
+        <!-- Project 3 -->
+        <div class="glass rounded-3xl p-8 card-hover">
+
+          <div class="flex items-center justify-between mb-6">
+            <h3 class="text-2xl font-semibold">
+              Simple Bucket List
+            </h3>
+
+            <span class="text-xs px-3 py-1 rounded-full bg-purple-500/20 text-purple-300">
+              Productivity
+            </span>
+          </div>
+
+          <p class="text-slate-400 leading-relaxed mb-8">
+            Minimal productivity app focused on tracking goals,
+            aspirations, and life experiences.
+          </p>
+
+          <a
+            href="https://play.google.com/store/apps/details?id=com.ananthan.simple_bucketlist"
+            target="_blank"
+            class="text-cyan-400 hover:text-cyan-300">
+            View on Play Store →
+          </a>
+
+        </div>
+
+        <!-- Project 4 -->
+        <div class="glass rounded-3xl p-8 card-hover">
+
+          <div class="flex items-center justify-between mb-6">
+            <h3 class="text-2xl font-semibold">
+              Workout Buddy
+            </h3>
+
+            <span class="text-xs px-3 py-1 rounded-full bg-orange-500/20 text-orange-300">
+              Fitness
+            </span>
+          </div>
+
+          <p class="text-slate-400 leading-relaxed mb-8">
+            Fitness companion app for workout tracking,
+            planning, and maintaining routines.
+          </p>
+
+          <a
+            href="https://play.google.com/store/apps/details?id=com.ananthan.workout_buddy.workout_buddy"
+            target="_blank"
+            class="text-cyan-400 hover:text-cyan-300">
+            View on Play Store →
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="py-24 px-6">
+
+    <div class="max-w-5xl mx-auto">
+
+      <h2 class="text-4xl font-bold mb-12">
+        Skills & Technologies
+      </h2>
+
+      <div class="flex flex-wrap gap-4">
+
+        <div class="px-5 py-3 rounded-2xl glass">Flutter</div>
+        <div class="px-5 py-3 rounded-2xl glass">Dart</div>
+        <div class="px-5 py-3 rounded-2xl glass">Firebase</div>
+        <div class="px-5 py-3 rounded-2xl glass">Riverpod</div>
+        <div class="px-5 py-3 rounded-2xl glass">REST APIs</div>
+        <div class="px-5 py-3 rounded-2xl glass">AdMob</div>
+        <div class="px-5 py-3 rounded-2xl glass">Google Maps</div>
+        <div class="px-5 py-3 rounded-2xl glass">CI/CD</div>
+        <div class="px-5 py-3 rounded-2xl glass">Localization</div>
+        <div class="px-5 py-3 rounded-2xl glass">Clean Architecture</div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-24 px-6">
+
+    <div class="max-w-4xl mx-auto text-center">
+
+      <h2 class="text-4xl font-bold mb-6">
+        Let’s Build Something Great
+      </h2>
+
+      <p class="text-slate-400 text-lg mb-10">
+        Open to collaborations, freelance projects, and mobile app opportunities.
+      </p>
+
+      <div class="flex justify-center gap-4 flex-wrap">
+
+        <a
+          href="https://github.com/ananthanan"
+          target="_blank"
+          class="px-6 py-3 rounded-2xl bg-blue-600 hover:bg-blue-500 transition">
+          GitHub
+        </a>
+
+        <a
+          href="mailto:yourmail@gmail.com"
+          class="px-6 py-3 rounded-2xl border border-slate-700 hover:border-blue-400 transition">
+          Email Me
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800 py-8 text-center text-slate-500 text-sm">
+    © 2026 Ananthakrishnan A — Built with HTML & Tailwind CSS
+  </footer>
+
 </body>
 </html>
